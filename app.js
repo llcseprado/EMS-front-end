@@ -19,7 +19,13 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 //Templating engine
-app.engine("hbs", exphbs.engine({ extname: ".hbs" }));
+app.engine(
+  "hbs",
+  exphbs.engine({
+    extname: ".hbs",
+    partialsDir: __dirname + "/views/partials/",
+  })
+);
 app.set("view engine", "hbs");
 
 //Router
