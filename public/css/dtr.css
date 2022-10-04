@@ -22,6 +22,10 @@ body {
 }
 
 /* master div that stores nav */
+.nav-bar-parent {
+  display: fixed;
+}
+
 .master-nav-div {
   display: flex;
   margin-bottom: 1.5rem;
