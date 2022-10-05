@@ -16,9 +16,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //Static files
-app.use(express.static("public"));
+app.use("/public", express.static("public"));
 
-//Templating engine
+//Templating engine (includes here partials)
 app.engine(
   "hbs",
   exphbs.engine({
@@ -28,16 +28,8 @@ app.engine(
 );
 app.set("view engine", "hbs");
 
-//Router
-// app.get("/", (req, res) => {
-//   res.render("home");
-// });
-
+//Routing is at user.js
 const routes = require("./server/routes/user");
 app.use("/", routes);
-
-// app.get("/dtr", (req, res) => {
-//   res.render("dtr");
-// });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

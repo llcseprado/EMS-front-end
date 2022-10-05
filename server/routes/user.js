@@ -9,7 +9,7 @@ const userController = require("../controllers/userController");
 //get static files (css)
 app.use(express.static("public"));
 
-//Router
+//Router (pasali sa title hehe)
 router.get("/", (req, res) => {
   res.render("home", {
     title: "EMS Homepage",
@@ -17,9 +17,8 @@ router.get("/", (req, res) => {
 });
 
 router.get("/dtr", (req, res) => {
-  res.render("dtr", {
+  res.render("dtr-emp", {
     title: "Daily Time Record",
-    style: "dtr.css",
   });
 });
 
