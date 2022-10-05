@@ -12,8 +12,7 @@ app.use(express.static("public"));
 //Router
 router.get("/", (req, res) => {
   res.render("home", {
-    title: "Homepage",
-    style: "dtr.css",
+    title: "EMS Homepage",
   });
 });
 
