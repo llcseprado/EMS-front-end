@@ -28,4 +28,10 @@ router.get("/employees", (req, res) => {
   });
 });
 
+router.get("/add-emp", (req, res) => {
+  res.render("add-emp", {
+    title: "Add Employee",
+  });
+});
+
 module.exports = router;
