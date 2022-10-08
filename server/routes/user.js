@@ -28,9 +28,15 @@ router.get("/employees", (req, res) => {
   });
 });
 
-router.get("/add-emp", (req, res) => {
+router.get("/add-employee", (req, res) => {
   res.render("add-emp", {
-    title: "Add Employee",
+    title: "Add Employee Profile",
+  });
+});
+
+router.get("/edit-employee", (req, res) => {
+  res.render("edit-emp", {
+    title: "Edit Employee Profile",
   });
 });
 
