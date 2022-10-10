@@ -40,4 +40,10 @@ router.get("/edit-employee", (req, res) => {
   });
 });
 
+router.get("/attendance-record", (req, res) => {
+  res.render("attendance-rec", {
+    title: "Attendance Record",
+  });
+});
+
 module.exports = router;
