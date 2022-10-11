@@ -52,4 +52,10 @@ router.get("/employee-list", (req, res) => {
   });
 });
 
+router.get("/personal-attendance-record", (req, res) => {
+  res.render("own-attendance-rec", {
+    title: "Employee Personal Attendance Records",
+  });
+});
+
 module.exports = router;
