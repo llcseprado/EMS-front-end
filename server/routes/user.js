@@ -10,9 +10,9 @@ const userController = require("../controllers/userController");
 app.use(express.static("public"));
 
 //Router (pasali sa title hehe)
-router.get("/", (req, res) => {
-  res.render("home", {
-    title: "EMS Homepage",
+router.get("/cashier-home", (req, res) => {
+  res.render("home-cashier", {
+    title: "Cashier Homepage",
   });
 });
 
@@ -43,6 +43,12 @@ router.get("/edit-employee", (req, res) => {
 router.get("/attendance-record", (req, res) => {
   res.render("attendance-rec", {
     title: "Attendance Record",
+  });
+});
+
+router.get("/employee-list", (req, res) => {
+  res.render("emp-list", {
+    title: "Employee Personal Information",
   });
 });
 
