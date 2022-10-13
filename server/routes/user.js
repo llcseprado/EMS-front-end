@@ -24,7 +24,7 @@ router.get("/dtr", (req, res) => {
 
 router.get("/employees", (req, res) => {
   res.render("employees-admin", {
-    title: "Employee Records",
+    title: "Admin Employee Records",
   });
 });
 
@@ -55,6 +55,12 @@ router.get("/employee-list", (req, res) => {
 router.get("/personal-attendance-record", (req, res) => {
   res.render("own-attendance-rec", {
     title: "Employee Personal Attendance Records",
+  });
+});
+
+router.get("/view-my-employee-profile", (req, res) => {
+  res.render("view-emp", {
+    title: "Employee Profile",
   });
 });
 
